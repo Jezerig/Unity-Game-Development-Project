@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
 {
 
     public float moveSpeed = 5f;
-
+    public Animator animator;
     public Rigidbody2D rb;
     public Weapon weapon;
     public Camera cam;
@@ -26,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             weapon.Fire();
+            animator.SetTrigger("Attack");
         }
     }
 

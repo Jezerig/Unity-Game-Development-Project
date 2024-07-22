@@ -31,9 +31,17 @@ public class Damageable : MonoBehaviour
             if(_health <= 0 )
             {
                 IsAlive = false;
-                aiPath.canSearch = false;
-                aiPath.canMove = false;
+                if (aiPath != null)
+                {
+                    aiPath.canSearch = false;
+                    aiPath.canMove = false;
+                }
                 animator.SetFloat("Speed", 0);
+                PlayerMovement playerMovement = gameObject.GetComponent<PlayerMovement>();
+                if (playerMovement != null)
+                {
+                    playerMovement.enabled = false;
+                }
             }
         }
     }
@@ -62,13 +70,19 @@ public class Damageable : MonoBehaviour
     }
 
 
-    public void Hit(int damage)
+    public bool Hit(int damage)
     {
         Debug.Log("Hit for " + damage);
         if (_isAlive && !isInvinsible)
         {
             Health -= damage;
             isInvinsible = true;
+            animator.SetTrigger("GetHit");
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 

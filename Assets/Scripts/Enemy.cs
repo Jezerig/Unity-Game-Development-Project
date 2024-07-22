@@ -4,11 +4,15 @@ using UnityEngine;
 using Pathfinding;
 using UnityEngine.UIElements;
 using System.Runtime.InteropServices.WindowsRuntime;
+using static UnityEngine.Rendering.DebugUI;
 
 public class Enemy : MonoBehaviour
 {
+    public bool playerAlive = true;
     public Transform attackPoint;
-    public float attackRange = 0.5f;
+    public float attackRange = 2f;
+    public float nextAttackTime = 0f;
+    public float attackDelay = 1f;
     public LayerMask playerLayers;
     public DetectionZone attackZone;
     public int damage = 21;
@@ -19,8 +23,7 @@ public class Enemy : MonoBehaviour
         private set
         {
             _isInRange = value;
-            animator.SetBool("isInRange", value);
-            Attack();
+            // animator.SetBool("isInRange", value);
         }
     }
     public AIPath aiPath;
@@ -31,27 +34,34 @@ public class Enemy : MonoBehaviour
     {
         animator = GetComponent<Animator>();
     }
-    /*
-    public float nextAttackTime = 0f;
-    public float lastAttackTime = 0f;
-    public float movementCooldown = 2f;
-    public float attackRate = 0.25f;
-   
-    */
-
+    
     void Attack()
     {
+        animator.SetTrigger("Attack");
         Collider2D[] hitPlayers = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, playerLayers);
         foreach (Collider2D player in hitPlayers)
         {
             Damageable damageable = player.GetComponent<Damageable>();
             if (damageable != null)
             {
-                damageable.Hit(damage);
+                if (!damageable.Hit(damage))
+                {
+                    playerAlive = false;
+                }
             }
         }
     }
 
+    /* Draw attack range
+    private void OnDrawGizmosSelected()
+    {
+        if (attackPoint == null)
+        {
+            return;
+        }
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+    }
+    */
     private void FixedUpdate()
     {
         if (_isInRange)
@@ -67,7 +77,28 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        isInRange = attackZone.detectedColliders.Count > 0;
+        if (playerAlive)
+        {
+            if (Time.time >= nextAttackTime)
+            {
+                isInRange = attackZone.detectedColliders.Count > 0;
+                Damageable character = gameObject.GetComponent<Damageable>();
+                if (isInRange && character.IsAlive)
+                {
+                    Attack();
+                    nextAttackTime = Time.time + attackDelay;
+                }
+            }
+            else
+            {
+                isInRange = false;
+            }
+        } else
+        {
+            aiPath.canSearch = false;
+            aiPath.canMove = false;
+            animator.SetBool("playerAlive", false);
+        }
         
         if (aiPath.desiredVelocity.x >= 0.01f)
         {
@@ -79,21 +110,5 @@ public class Enemy : MonoBehaviour
             transform.localScale = new Vector3(-1f, 1f, 1f);
             animator.SetFloat("Speed", walkSpeed);
         }
-        /*
-        if (Time.time >= nextAttackTime)
-        {
-            if (isInRange)
-            {
-                Attack();
-                nextAttackTime = Time.time + 1f / attackRate;
-                lastAttackTime = Time.time;
-                aiPath.isStopped = true;
-            }
-        }
-        if (Time.time >= lastAttackTime + 1)
-        {
-            aiPath.isStopped = false;
-        }
-        */
     }
 }
