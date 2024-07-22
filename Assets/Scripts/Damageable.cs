@@ -6,8 +6,8 @@ using UnityEngine;
 public class Damageable : MonoBehaviour
 {
     Animator animator;
+    private GameObject currentGameObject;
     public AIPath aiPath;
-
     [SerializeField]
     private int _maxHealth = 100;
     public int MaxHealth
@@ -86,6 +86,17 @@ public class Damageable : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        currentGameObject = animator.transform.gameObject;
+        if (currentGameObject ==  GameObject.Find("Player")) 
+        {
+            if (GameData.PlayerHealth != 0)
+            {
+                Health = GameData.PlayerHealth;
+            }
+        }
+    }
     // Update is called once per frame
     void Update()
     {

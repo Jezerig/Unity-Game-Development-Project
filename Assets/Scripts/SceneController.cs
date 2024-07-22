@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class SceneController : MonoBehaviour
 {
     public static SceneController instance;
+    public GameObject player;
+    public int MaxHealth = 100;
 
     private void Awake()
     {
@@ -19,13 +21,27 @@ public class SceneController : MonoBehaviour
         }
         
     }
+
+    public void StorePlayerHealth()
+    {
+        if(GameObject.Find("Player"))
+        {
+            Damageable player = GameObject.Find("Player").GetComponent<Damageable>();
+            if (player != null)
+            {
+                GameData.PlayerHealth = player.Health;
+            }
+        }
+    }
     public void NextScene()
     {
+        StorePlayerHealth();
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void LoadScene(string sceneName)
     {
+        StorePlayerHealth();
         SceneManager.LoadSceneAsync(sceneName);
     }
 
