@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyBullet : MonoBehaviour
 {
     private GameObject player;
+    public Animator animator;
     private Rigidbody2D rb;
     public int damage = 49;
     public float fireForce = 20f;
@@ -15,14 +16,19 @@ public class EnemyBullet : MonoBehaviour
         Damageable damageable = collision.GetComponent<Damageable>();
         if (damageable != null && damageable.gameObject == GameObject.FindGameObjectWithTag("Player"))
         {
+            animator.SetTrigger("Explode");
             damageable.Hit(damage);
         }
+    }
+
+    public void DestroyGameObject()
+    {
         Destroy(gameObject);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroy(gameObject);
+        animator.SetTrigger("Explode");
     }
 
     // Start is called before the first frame update
@@ -38,11 +44,5 @@ public class EnemyBullet : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, 0, rot);
 
         Destroy(gameObject, bulletLiveTime);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

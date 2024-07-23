@@ -230,7 +230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 261b813093b976f4f85ae3fcb070ee99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 10
   animator: {fileID: 3785670473308122253}
   rb: {fileID: 307121812255516624}
   weapon: {fileID: 5275927795751477614}

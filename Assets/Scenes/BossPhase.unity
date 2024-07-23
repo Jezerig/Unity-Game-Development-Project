@@ -78430,7 +78430,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 17
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -87420,8 +87420,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aiPath: {fileID: 0}
-  _maxHealth: 1000
-  _health: 1000
+  _maxHealth: 10000
+  _health: 10000
   _isAlive: 1
   isInvinsible: 0
 --- !u!70 &1717950215
@@ -87535,9 +87535,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1717950213}
   bulletPrefab: {fileID: 3630838464233289461, guid: da46df4234b8e2c47b818b636bded15c, type: 3}
-  player: {fileID: 0}
   firePoint: {fileID: 1974997245}
-  attackDelay: 2
+  attackDelay: 1
 --- !u!1 &1974997244
 GameObject:
   m_ObjectHideFlags: 0
@@ -87621,7 +87620,7 @@ GameObject:
   - component: {fileID: 1985159412}
   - component: {fileID: 1985159411}
   - component: {fileID: 1985159410}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}

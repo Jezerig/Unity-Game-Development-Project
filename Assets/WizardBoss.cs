@@ -6,7 +6,7 @@ public class WizardBoss : MonoBehaviour
 {
     public Animator animator;
     public GameObject bulletPrefab;
-    public GameObject player;
+    private GameObject player;
     public Transform firePoint;
     private float nextAttackTime = 0;
     public float attackDelay = 2;
@@ -24,7 +24,6 @@ public class WizardBoss : MonoBehaviour
         {
             if (Time.time >= nextAttackTime)
             {
-                Fire();
                 animator.SetTrigger("Attack");
                 nextAttackTime = Time.time + attackDelay;
             }

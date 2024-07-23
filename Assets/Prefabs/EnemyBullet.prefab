@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6429636699806762563}
   - component: {fileID: 3827423101761598203}
   - component: {fileID: 5553273748180974304}
+  - component: {fileID: 1688921783206432647}
   m_Layer: 10
   m_Name: EnemyBullet
   m_TagString: Untagged
@@ -126,8 +127,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcb39857d78fa364fa2c80644f94235f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 1688921783206432647}
   damage: 49
-  fireForce: 20
+  fireForce: 40
   bulletLiveTime: 5
 --- !u!70 &5553273748180974304
 CapsuleCollider2D:
@@ -164,3 +166,24 @@ CapsuleCollider2D:
   m_Offset: {x: 0.06, y: -0.005}
   m_Size: {x: 0.14, y: 0.12}
   m_Direction: 1
+--- !u!95 &1688921783206432647
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3630838464233289461}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6d971ce816067b242b3956391bd6577a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
