@@ -72,9 +72,9 @@ public class Damageable : MonoBehaviour
 
     public bool Hit(int damage)
     {
-        Debug.Log("Hit for " + damage);
         if (_isAlive && !isInvinsible)
         {
+            Debug.Log(gameObject + "hit for " + damage);
             Health -= damage;
             isInvinsible = true;
             animator.SetTrigger("GetHit");
