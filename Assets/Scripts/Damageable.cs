@@ -9,6 +9,7 @@ public class Damageable : MonoBehaviour
     Animator animator;
     private GameObject currentGameObject;
     public AIPath aiPath;
+    [SerializeField] HealthBar healthBar;
     [SerializeField]
     private int _maxHealth = 100;
     public int MaxHealth
@@ -68,6 +69,14 @@ public class Damageable : MonoBehaviour
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        try
+        {
+            healthBar = gameObject.transform.parent.GetComponentInChildren<HealthBar>();
+        } catch
+        {
+            healthBar = GetComponentInChildren<HealthBar>();
+        }
+        
     }
 
 
@@ -77,6 +86,7 @@ public class Damageable : MonoBehaviour
         {
             Debug.Log(gameObject + "hit for " + damage);
             Health -= damage;
+            healthBar.UpdateHealthBar(Health, MaxHealth);
             isInvinsible = true;
             animator.SetTrigger("GetHit");
             return true;
@@ -97,6 +107,7 @@ public class Damageable : MonoBehaviour
                 Health = GameData.PlayerHealth;
             }
         }
+        healthBar.UpdateHealthBar(Health, MaxHealth);
     }
     // Update is called once per frame
     void Update()
