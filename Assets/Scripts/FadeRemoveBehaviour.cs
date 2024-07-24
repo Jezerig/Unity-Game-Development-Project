@@ -18,7 +18,13 @@ public class FadeRemoveBehaviour : StateMachineBehaviour
     {
         TimeElapsed = 0f;
         spriteRenderer = animator.GetComponent<SpriteRenderer>();
-        target = animator.transform.parent.gameObject;
+        try
+        {
+            target = animator.transform.parent.gameObject;
+        } catch
+        {
+            target = animator.transform.gameObject;
+        }
         startColor = spriteRenderer.color;
     }
 

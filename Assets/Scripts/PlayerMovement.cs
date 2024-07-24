@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -14,6 +15,12 @@ public class PlayerMovement : MonoBehaviour
 
     Vector2 movement;
     Vector2 mousePos;
+
+    public void LoadDeathScreen()
+    {
+        GameData.PlayerHealth = 100;
+        SceneManager.LoadScene("DeathScreen");
+    }
 
     // Update is called once per frame
     void Update()

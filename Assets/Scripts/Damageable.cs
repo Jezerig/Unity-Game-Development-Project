@@ -2,6 +2,7 @@ using Pathfinding;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Damageable : MonoBehaviour
 {
@@ -91,7 +92,7 @@ public class Damageable : MonoBehaviour
         currentGameObject = animator.transform.gameObject;
         if (currentGameObject ==  GameObject.Find("Player")) 
         {
-            if (GameData.PlayerHealth != 0)
+            if (GameData.PlayerHealth > 0)
             {
                 Health = GameData.PlayerHealth;
             }

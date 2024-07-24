@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.Http.Headers;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WizardBoss : MonoBehaviour
 {
@@ -16,6 +18,17 @@ public class WizardBoss : MonoBehaviour
         Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
     }
 
+    public void Kill()
+    {
+        Destroy(gameObject);
+    }
+
+    public void loadCredits()
+    {
+        GameData.PlayerHealth = 100;
+        SceneManager.LoadSceneAsync("Credits");
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -28,9 +41,5 @@ public class WizardBoss : MonoBehaviour
                 nextAttackTime = Time.time + attackDelay;
             }
         }
-    }
-
-
-
-
+    }    
 }
