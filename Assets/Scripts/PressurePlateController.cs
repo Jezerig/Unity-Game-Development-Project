@@ -7,15 +7,27 @@ public class PressurePlateController : MonoBehaviour
     public bool isPressed;
     public Animator animator;
     public string sceneName;
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
     public void LoadScene(string scene)
     {
         sceneName = scene;
+    }
+
+    public void PressPlateSound()
+    {
+        audioManager.PlaySFX(audioManager.pressPressurePlate);
     }
 
     public void PressPlate()
     {
         if(!isPressed)
         {
+            PressPlateSound();
             isPressed = true;
             Debug.Log("Pressure plate pressed.");
             animator.Play("PressedPlate");

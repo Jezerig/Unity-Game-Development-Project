@@ -13,8 +13,30 @@ public class PlayerMovement : MonoBehaviour
     public Weapon weapon;
     public Camera cam;
 
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     Vector2 movement;
     Vector2 mousePos;
+
+    public void PlayerDeathSound()
+    {
+        audioManager.PlaySFX(audioManager.playerDeath);
+    }
+
+    public void PlayerAttackSound()
+    {
+        audioManager.PlaySFX(audioManager.playerShoot);
+    }
+
+    public void PlayerHitSound()
+    {
+        audioManager.PlaySFX(audioManager.playerHit);
+    }
 
     public void LoadDeathScreen()
     {

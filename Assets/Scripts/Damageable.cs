@@ -9,8 +9,24 @@ public class Damageable : MonoBehaviour
     Animator animator;
     private GameObject currentGameObject;
     public AIPath aiPath;
+
     [SerializeField] HealthBar healthBar;
     [SerializeField]
+
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+        try
+        {
+            healthBar = gameObject.transform.parent.GetComponentInChildren<HealthBar>();
+        }
+        catch
+        {
+            healthBar = GetComponentInChildren<HealthBar>();
+        }
+
+    }
+
     private int _maxHealth = 100;
     public int MaxHealth
     {
@@ -65,20 +81,6 @@ public class Damageable : MonoBehaviour
             animator.SetBool("isAlive", value);
         }
     }
-
-    private void Awake()
-    {
-        animator = GetComponent<Animator>();
-        try
-        {
-            healthBar = gameObject.transform.parent.GetComponentInChildren<HealthBar>();
-        } catch
-        {
-            healthBar = GetComponentInChildren<HealthBar>();
-        }
-        
-    }
-
 
     public bool Hit(int damage)
     {

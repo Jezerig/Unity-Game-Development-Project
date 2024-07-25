@@ -27,11 +27,28 @@ public class Enemy : MonoBehaviour
     public Animator animator;
     public float walkSpeed = 5f;
 
+    AudioManager audioManager;
+
     private void Awake()
     {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
         animator = GetComponent<Animator>();
     }
-    
+    public void SkeletonDeathSound()
+    {
+        audioManager.PlaySFX(audioManager.skeletonDeath);
+    }
+
+    public void SkeletonAttackSound()
+    {
+        audioManager.PlaySFX(audioManager.skeletonAttack);
+    }
+
+    public void SkeletonHitSound()
+    {
+        audioManager.PlaySFX(audioManager.skeletonHit);
+    }
+
     void Attack()
     {
         animator.SetTrigger("Attack");

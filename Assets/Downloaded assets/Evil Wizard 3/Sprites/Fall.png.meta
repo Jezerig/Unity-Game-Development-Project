@@ -1,9 +1,9 @@
 fileFormatVersion: 2
-guid: 4bd7e27cfe517944aa33b51a2eb1ce0c
+guid: 862a51da390209a4faea1934a3c2c8d2
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 12
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Moving_0
+      name: Fall_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 50
-        height: 50
+        width: 140
+        height: 140
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d716137207df8aa4a9a268013646f073
-      internalID: -943592288
+      spriteID: 0dcbefb993f32ff419d47cba200dcc31
+      internalID: 1935594166
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Moving_1
+      name: Fall_1
       rect:
         serializedVersion: 2
-        x: 50
+        x: 140
         y: 0
-        width: 50
-        height: 50
+        width: 140
+        height: 140
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c6944527fa136849ba94b024797dca4
-      internalID: -1165984779
+      spriteID: 2f4ceffe9affc794d89374003888c7f1
+      internalID: 1337788289
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Moving_2
+      name: Fall_2
       rect:
         serializedVersion: 2
-        x: 100
+        x: 280
         y: 0
-        width: 50
-        height: 50
+        width: 140
+        height: 140
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,29 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd3af102c312d0947b47596b0a393557
-      internalID: 367575262
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Moving_3
-      rect:
-        serializedVersion: 2
-        x: 150
-        y: 0
-        width: 50
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c3f8e99aaae6f4047924df8fdff345b4
-      internalID: -792785704
+      spriteID: 7b7becf063d4b484ea13315e662862e6
+      internalID: 496750445
       vertices: []
       indices: 
       edges: []
@@ -204,10 +183,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Moving_0: -943592288
-      Moving_1: -1165984779
-      Moving_2: 367575262
-      Moving_3: -792785704
+      Fall_0: 1935594166
+      Fall_1: 1337788289
+      Fall_2: 496750445
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,9 +1,9 @@
 fileFormatVersion: 2
-guid: c2fa69c311e8ddd40805d213dfb292f8
+guid: 73d1bcfc9eeac7a48a4cffb49a5b635e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 12
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Jump_0
+      name: Explode_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 140
-        height: 140
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f49c7bb6d004cc45a3cf1daaf079f4a
-      internalID: 1124959474
+      spriteID: 28276936fed50054e9a2b67ac3d11bc8
+      internalID: -1623465313
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_1
+      name: Explode_1
       rect:
         serializedVersion: 2
-        x: 140
+        x: 50
         y: 0
-        width: 140
-        height: 140
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b599ccaff22d44469c900afa5d6e9c1
-      internalID: 389888454
+      spriteID: 045758096182f0145a36f1240545804c
+      internalID: 1575902063
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_2
+      name: Explode_2
       rect:
         serializedVersion: 2
-        x: 280
+        x: 100
         y: 0
-        width: 140
-        height: 140
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,8 +166,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc34daf7c62a46844899f31d3e22dd8b
-      internalID: 1146671751
+      spriteID: 0b5e18e33c00c9b41a745cdda7663eba
+      internalID: 889278276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explode_3
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f296126620a7b2b48b0d84a148280279
+      internalID: -1986159531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explode_4
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 462daa97e4463f940b2c7828e06a15d2
+      internalID: -559955788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explode_5
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 430c188567fc0bb4da0d1ae1e076925e
+      internalID: 63460821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explode_6
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a123cb230ebe7e948b9aad73fb7878b7
+      internalID: 1971749813
       vertices: []
       indices: 
       edges: []
@@ -183,9 +267,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Jump_0: 1124959474
-      Jump_1: 389888454
-      Jump_2: 1146671751
+      Explode_0: -1623465313
+      Explode_1: 1575902063
+      Explode_2: 889278276
+      Explode_3: -1986159531
+      Explode_4: -559955788
+      Explode_5: 63460821
+      Explode_6: 1971749813
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

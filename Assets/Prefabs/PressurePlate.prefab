@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1967287904960408327}
   - component: {fileID: 4056646257673142808}
   - component: {fileID: 5226792644123653627}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PressurePlate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,6 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPressed: 0
   animator: {fileID: 5226792644123653627}
+  sceneName: 
 --- !u!95 &5226792644123653627
 Animator:
   serializedVersion: 5

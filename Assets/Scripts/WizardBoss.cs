@@ -12,7 +12,12 @@ public class WizardBoss : MonoBehaviour
     public Transform firePoint;
     private float nextAttackTime = 0;
     public float attackDelay = 2;
+    AudioManager audioManager;
 
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
     public void Fire()
     {
         Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
@@ -23,6 +28,18 @@ public class WizardBoss : MonoBehaviour
         Destroy(gameObject);
     }
 
+    public void WizardAttackSound()
+    {
+        audioManager.PlaySFX(audioManager.wizardAttack);
+    }
+    public void WizardDeathSound()
+    {
+        audioManager.PlaySFX(audioManager.wizardDeath);
+    }
+    public void WizardHitSound()
+    {
+        audioManager.PlaySFX(audioManager.wizardHit);
+    }
     public void loadCredits()
     {
         GameData.PlayerHealth = 100;
