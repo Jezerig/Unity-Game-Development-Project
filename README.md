@@ -42,3 +42,5 @@ Main menu: https://www.youtube.com/watch?v=-GWjA6dixV4
 
 Credits: https://www.youtube.com/watch?v=cj6hwCjiVZE
 
+Intro image: https://www.freepik.com/free-ai-image/view-castle-night-with-scary-atmosphere_72460948.htm#query=rpg%20background&position=1&from_view=keyword&track=ais_user&uuid=70a77303-fb93-4449-b1ed-c2c8f39a6190
+
