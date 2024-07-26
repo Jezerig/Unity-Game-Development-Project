@@ -49,6 +49,9 @@ public class Damageable : MonoBehaviour
             if(_health <= 0 )
             {
                 IsAlive = false;
+                Collider2D[] colliders = GetComponents<Collider2D>();
+                foreach (Collider2D collider in colliders) { collider.enabled = false; }
+
                 if (aiPath != null)
                 {
                     aiPath.canSearch = false;
