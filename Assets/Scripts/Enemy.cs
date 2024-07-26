@@ -78,12 +78,16 @@ public class Enemy : MonoBehaviour
     */
     private void FixedUpdate()
     {
-        if (_isInRange)
+        if (aiPath != null)
         {
-            aiPath.isStopped = true;
-        } else
-        {
-            aiPath.isStopped = false;
+            if (_isInRange)
+            {
+                aiPath.isStopped = true;
+            }
+            else
+            {
+                aiPath.isStopped = false;
+            }
         }
     }
 
@@ -109,20 +113,26 @@ public class Enemy : MonoBehaviour
             }
         } else
         {
-            aiPath.canSearch = false;
-            aiPath.canMove = false;
+            if (aiPath != null)
+            {
+                aiPath.canSearch = false;
+                aiPath.canMove = false;
+            }
             animator.SetBool("playerAlive", false);
         }
         
-        if (aiPath.desiredVelocity.x >= 0.01f)
+        if(aiPath != null)
         {
-            transform.localScale = new Vector3(1f, 1f, 1f);
-            animator.SetFloat("Speed", walkSpeed);
-        }
-        else if (aiPath.desiredVelocity.x <= 0.01f)
-        {
-            transform.localScale = new Vector3(-1f, 1f, 1f);
-            animator.SetFloat("Speed", walkSpeed);
+            if (aiPath.desiredVelocity.x >= 0.01f)
+            {
+                transform.localScale = new Vector3(1f, 1f, 1f);
+                animator.SetFloat("Speed", walkSpeed);
+            }
+            else if (aiPath.desiredVelocity.x <= 0.01f)
+            {
+                transform.localScale = new Vector3(-1f, 1f, 1f);
+                animator.SetFloat("Speed", walkSpeed);
+            }
         }
     }
 }

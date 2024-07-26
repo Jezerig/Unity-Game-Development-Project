@@ -12,6 +12,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip playerHit;
     public AudioClip playerDeath;
     public AudioClip pressPressurePlate;
+    public AudioClip BulletImpact;
 
     public AudioClip skeletonAttack;
     public AudioClip skeletonHit;

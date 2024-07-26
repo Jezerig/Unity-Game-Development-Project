@@ -231,7 +231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 261b813093b976f4f85ae3fcb070ee99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
+  moveSpeed: 5
   animator: {fileID: 3785670473308122253}
   rb: {fileID: 307121812255516624}
   weapon: {fileID: 5275927795751477614}
@@ -285,7 +285,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aiPath: {fileID: 0}
   healthBar: {fileID: 0}
-  _maxHealth: 100
   _health: 100
   _isAlive: 1
   isInvinsible: 0

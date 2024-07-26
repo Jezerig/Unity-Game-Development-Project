@@ -22,6 +22,10 @@ public class PressurePlateController : MonoBehaviour
     {
         audioManager.PlaySFX(audioManager.pressPressurePlate);
     }
+    public void ResetPlayerHealth()
+    {
+        GameData.PlayerHealth = 100;
+    }
 
     public void PressPlate()
     {

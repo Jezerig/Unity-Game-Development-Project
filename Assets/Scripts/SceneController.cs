@@ -7,7 +7,6 @@ public class SceneController : MonoBehaviour
 {
     public static SceneController instance;
     public GameObject player;
-    public int MaxHealth = 100;
 
     private void Awake()
     {
