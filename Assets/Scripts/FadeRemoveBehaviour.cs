@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class FadeRemoveBehaviour : StateMachineBehaviour
 {
-    /* Source: https://www.youtube.com/watch?v=KtPxBe1f8Kg */
+    // Source: https://www.youtube.com/watch?v=KtPxBe1f8Kg
 
     public float fadeTime = 2f;
     private float TimeElapsed = 0f;

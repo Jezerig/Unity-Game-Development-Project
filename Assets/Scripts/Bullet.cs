@@ -5,7 +5,9 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public float bulletLiveTime = 5f;
+    // Source https://www.youtube.com/watch?v=LqrAbEaDQzc
+
+    public float bulletLiveTime = 5f; // Time it takes before bullet automatically gets destroyed https://discussions.unity.com/t/destroying-projectile-prefabs-after-time/187507
     public int damage = 34;
     AudioManager audioManager;
 
@@ -19,6 +21,7 @@ public class Bullet : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // Does damage to a damageable target
         Damageable damageable = collision.GetComponent<Damageable>();
         if (damageable != null)
         {

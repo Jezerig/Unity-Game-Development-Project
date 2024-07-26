@@ -21,6 +21,7 @@ public class EnemySpawner : MonoBehaviour
     private void Awake()
     {
         SetTimeUntilSpawn();
+        // Finds the player for A* path finding
         _enemyPrefab.GetComponent<AIDestinationSetter>().target = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
@@ -28,7 +29,7 @@ public class EnemySpawner : MonoBehaviour
     void Update()
     {
         _timeUntilSpawn -= Time.deltaTime;
-
+        // When time runs out, spawns an enemy
         if (_timeUntilSpawn <= 0)
         {
             Instantiate(_enemyPrefab, transform.position, Quaternion.identity);
@@ -38,6 +39,7 @@ public class EnemySpawner : MonoBehaviour
 
     private void SetTimeUntilSpawn()
     {
+        // Sets a random spawn time for the next enemy
         _timeUntilSpawn = Random.Range(_minimumSpawnTime, _maximumSpawnTime);
     }
 }

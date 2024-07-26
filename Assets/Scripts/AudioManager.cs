@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
+    // Source: https://www.youtube.com/watch?v=N8whM1GjH4w
+
     [SerializeField] AudioSource musicSource;
     [SerializeField] AudioSource sfxSource;
 

@@ -10,6 +10,8 @@ public class Damageable : MonoBehaviour
     private GameObject currentGameObject;
     public AIPath aiPath;
 
+    // Source: https://www.youtube.com/watch?v=KtPxBe1f8Kg, https://www.youtube.com/watch?v=_4UTWtC2Wnw
+
     [SerializeField] HealthBar healthBar;
     [SerializeField]
 
@@ -49,11 +51,13 @@ public class Damageable : MonoBehaviour
             if(_health <= 0 )
             {
                 IsAlive = false;
+                // Destroy all colliders when character dies
                 Collider2D[] colliders = GetComponents<Collider2D>();
                 foreach (Collider2D collider in colliders) { collider.enabled = false; }
 
                 if (aiPath != null)
                 {
+                    // stop AI follow
                     aiPath.canSearch = false;
                     aiPath.canMove = false;
                 }
@@ -61,6 +65,7 @@ public class Damageable : MonoBehaviour
                 PlayerMovement playerMovement = gameObject.GetComponent<PlayerMovement>();
                 if (playerMovement != null)
                 {
+                    // Stops player movement
                     playerMovement.enabled = false;
                 }
             }
@@ -89,6 +94,7 @@ public class Damageable : MonoBehaviour
     {
         if (_isAlive && !isInvinsible)
         {
+            // Player takes damage and updates health bar
             Debug.Log(gameObject + "hit for " + damage);
             Health -= damage;
             healthBar.UpdateHealthBar(Health, MaxHealth);
@@ -104,6 +110,7 @@ public class Damageable : MonoBehaviour
 
     private void Start()
     {
+        // Get player health from GameData and set HealthBar
         currentGameObject = animator.transform.gameObject;
         if (currentGameObject ==  GameObject.Find("Player")) 
         {
@@ -117,6 +124,7 @@ public class Damageable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Invinsibility before can take damage again
         if (isInvinsible)
         {
             if (timeSinceHit > invincibilityTime)

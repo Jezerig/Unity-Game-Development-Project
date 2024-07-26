@@ -20,7 +20,6 @@ public class Enemy : MonoBehaviour
         private set
         {
             _isInRange = value;
-            // animator.SetBool("isInRange", value);
         }
     }
     public AIPath aiPath;
@@ -29,11 +28,16 @@ public class Enemy : MonoBehaviour
 
     AudioManager audioManager;
 
+    // Source for combat: https://www.youtube.com/watch?v=sPiVz1k-fEs, https://www.youtube.com/watch?v=hl9q6IWiVqA
+    // Source for AI movement: https://www.youtube.com/watch?v=jvtFUfJ6CP8
+
     private void Awake()
     {
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
         animator = GetComponent<Animator>();
     }
+
+    // Sounds effects
     public void SkeletonDeathSound()
     {
         audioManager.PlaySFX(audioManager.skeletonDeath);
@@ -52,6 +56,7 @@ public class Enemy : MonoBehaviour
     void Attack()
     {
         animator.SetTrigger("Attack");
+        // Checks all the collisions (if multiple players)
         Collider2D[] hitPlayers = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, playerLayers);
         foreach (Collider2D player in hitPlayers)
         {
@@ -97,6 +102,7 @@ public class Enemy : MonoBehaviour
     {
         if (playerAlive)
         {
+            // attack speed
             if (Time.time >= nextAttackTime)
             {
                 isInRange = attackZone.detectedColliders.Count > 0;
@@ -115,12 +121,14 @@ public class Enemy : MonoBehaviour
         {
             if (aiPath != null)
             {
+                // Stops AI follow
                 aiPath.canSearch = false;
                 aiPath.canMove = false;
             }
             animator.SetBool("playerAlive", false);
         }
         
+        // Turns the enemy based on the players position
         if(aiPath != null)
         {
             if (aiPath.desiredVelocity.x >= 0.01f)

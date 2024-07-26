@@ -11,9 +11,11 @@ public class EnemyBullet : MonoBehaviour
     public float fireForce = 20f;
     public float bulletLiveTime = 5f;
 
+    // Source: https://www.youtube.com/watch?v=--u20SaCCow
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Damageable damageable = collision.GetComponent<Damageable>();
+        // If the target is the player
         if (damageable != null && damageable.gameObject == GameObject.FindGameObjectWithTag("Player"))
         {
             animator.SetTrigger("Explode");
@@ -37,6 +39,7 @@ public class EnemyBullet : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player");
 
+        // Follows player direction
         Vector3 direction = player.transform.position - transform.position;
         rb.velocity = new Vector2(direction.x, direction.y).normalized * fireForce;
 

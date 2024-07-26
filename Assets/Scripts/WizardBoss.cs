@@ -18,16 +18,20 @@ public class WizardBoss : MonoBehaviour
     {
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
+
+    // Boss shooting
     public void Fire()
     {
         Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
     }
 
+    // Destroy boss GameObject (when killed)
     public void Kill()
     {
         Destroy(gameObject);
     }
 
+    // Different sounds the boss makes
     public void WizardAttackSound()
     {
         audioManager.PlaySFX(audioManager.wizardAttack);
@@ -40,12 +44,15 @@ public class WizardBoss : MonoBehaviour
     {
         audioManager.PlaySFX(audioManager.wizardHit);
     }
+
+    // Load Credits scene (on kill)
     public void loadCredits()
     {
         GameData.PlayerHealth = 100;
         SceneManager.LoadSceneAsync("Credits");
     }
 
+    // Destroys all the enemies (when the boss is killed)
     public void DestroyEnemies()
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");

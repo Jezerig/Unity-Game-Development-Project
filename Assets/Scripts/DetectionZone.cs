@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DetectionZone : MonoBehaviour
 {
+    // Source: https://www.youtube.com/watch?v=hl9q6IWiVqA
+
     public List<Collider2D> detectedColliders = new List<Collider2D>();
     Collider2D col;
 

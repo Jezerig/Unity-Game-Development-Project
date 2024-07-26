@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
+
+    // Source: https://www.youtube.com/watch?v=E25JWfeCFPA
+
     public static SceneController instance;
     public GameObject player;
 

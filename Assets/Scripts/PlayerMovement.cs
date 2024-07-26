@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -24,6 +25,8 @@ public class PlayerMovement : MonoBehaviour
     Vector2 movement;
     Vector2 mousePos;
 
+
+    // Player sound effects
     public void PlayerDeathSound()
     {
         audioManager.PlaySFX(audioManager.playerDeath);
@@ -39,18 +42,21 @@ public class PlayerMovement : MonoBehaviour
         audioManager.PlaySFX(audioManager.playerHit);
     }
 
+    // Loads death screen and resets player's health in the GameData file
     public void LoadDeathScreen()
     {
         GameData.PlayerHealth = 100;
         SceneManager.LoadScene("DeathScreen");
     }
 
+
+    // Source: https://www.youtube.com/watch?v=LNLVOjbrQj4
     // Update is called once per frame
     void Update()
     {
+        // Player movement
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
-
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
 
         if (Input.GetMouseButtonDown(0))
@@ -62,6 +68,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        // player character look direction follows mouse position
         rb.MovePosition(rb.position + movement.normalized * moveSpeed * Time.fixedDeltaTime);
         Vector2 lookDir = mousePos - rb.position;
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;

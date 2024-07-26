@@ -5,6 +5,8 @@ using UnityEngine.Events;
 
 public class Interactable : MonoBehaviour
 {
+    // Source: https://www.youtube.com/watch?v=cLzG1HDcM4s
+
     public bool isInArea;
     public UnityEvent interactAction;
 
