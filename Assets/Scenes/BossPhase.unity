@@ -78650,7 +78650,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2861775139826849125, guid: 81c086fb6e16b5e479f19810200088aa, type: 3}
       propertyPath: m_text
-      value: EVIL WIZARD'S LAYER
+      value: EVIL WIZARD'S LAIR
       objectReference: {fileID: 0}
     - target: {fileID: 3528395751024686036, guid: 81c086fb6e16b5e479f19810200088aa, type: 3}
       propertyPath: m_text
