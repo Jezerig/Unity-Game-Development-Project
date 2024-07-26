@@ -46,6 +46,15 @@ public class WizardBoss : MonoBehaviour
         SceneManager.LoadSceneAsync("Credits");
     }
 
+    public void DestroyEnemies()
+    {
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach (GameObject enemy in enemies)
+        {
+            Destroy(enemy);
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {

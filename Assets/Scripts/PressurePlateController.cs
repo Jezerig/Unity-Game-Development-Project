@@ -31,7 +31,6 @@ public class PressurePlateController : MonoBehaviour
     {
         if(!isPressed)
         {
-            PressPlateSound();
             isPressed = true;
             Debug.Log("Pressure plate pressed.");
             animator.Play("PressedPlate");

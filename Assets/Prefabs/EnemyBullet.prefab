@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1688921783206432647}
-  damage: 49
+  damage: 33
   fireForce: 40
   bulletLiveTime: 5
 --- !u!70 &5553273748180974304

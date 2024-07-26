@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+        audioManager.PlaySFX(audioManager.pressPressurePlate);
     }
 
     Vector2 movement;
