@@ -16,7 +16,7 @@ Enemy Pathfinder: A* Pathfinding Project
 Intro Background: AI generated image from Freepik
 
 
-Source material:
+Source material for development:
 
 Top down shooting and player movement: https://www.youtube.com/watch?v=LNLVOjbrQj4
 
