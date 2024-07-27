@@ -71,7 +71,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    /* Draw attack range
+
     private void OnDrawGizmosSelected()
     {
         if (attackPoint == null)
@@ -80,7 +80,7 @@ public class Enemy : MonoBehaviour
         }
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
-    */
+    
     private void FixedUpdate()
     {
         if (aiPath != null)
