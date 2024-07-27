@@ -1,10 +1,13 @@
 # Wizard's End
 LUT course Game Development Project
+
 Game Engine: Unity 2022.3.30f1
+
 Language: C#
 
 # Playable Web Version
 https://jezeri.itch.io/wizards-end
+
 (Fullscreen required due to scaling issues with itch.io)
 
 # Trailer
