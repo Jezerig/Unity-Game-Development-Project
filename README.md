@@ -1,5 +1,21 @@
 LUT course Game Development Project
 
+
+Music: 8-Bit RPG/Adventure Music Pack I By Francesco Fabrizio (Unity Asset Store)
+
+Sound Effects: RPG Essentials Sound Effects - FREE! By leohpaz (Unity Asset Store)
+
+Environment Tileset: Rogue Fantasy Castle By Szadi Art. (Unity Asset Store)
+
+Enemy Skeleton: Monsters_Creatures_Fantasy By Luiz Melo (Unity Asset Store)
+
+Evil Wizard: Evil Wizard 3 By Luiz Melo (Unity Asset Store)
+
+Enemy Pathfinder: A* Pathfinding Project
+
+Intro Background: AI generated image from Freepik
+
+
 Source material:
 
 Top down shooting and player movement: https://www.youtube.com/watch?v=LNLVOjbrQj4
