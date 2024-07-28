@@ -1,6 +1,19 @@
+# Wizard's End
 LUT course Game Development Project
 
+Game Engine: Unity 2022.3.30f1
 
+Language: C#
+
+# Playable Web Version
+https://jezeri.itch.io/wizards-end
+
+(Fullscreen required due to scaling issues with itch.io)
+
+# Trailer
+TBA
+
+# Downloaded Assets
 Music: 8-Bit RPG/Adventure Music Pack I By Francesco Fabrizio (Unity Asset Store)
 
 Sound Effects: RPG Essentials Sound Effects - FREE! By leohpaz (Unity Asset Store)
@@ -16,7 +29,7 @@ Enemy Pathfinder: A* Pathfinding Project
 Intro Background: AI generated image from Freepik
 
 
-Source material for development:
+# Source material for development (i.e. Tutorials):
 
 Top down shooting and player movement: https://www.youtube.com/watch?v=LNLVOjbrQj4
 
