@@ -8,8 +8,6 @@ Language: C#
 # Playable Web Version
 https://jezeri.itch.io/wizards-end
 
-(Fullscreen required due to scaling issues with itch.io)
-
 # Trailer
 TBA
 
