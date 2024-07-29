@@ -21,6 +21,11 @@ Music powered by BreakingCopyright: https://breakingcopyright.com
 
 https://breakingcopyright.com/song/ghostrifter-official-resurgence
 
+# Consept
+A top-down dungeon crawler where the player's goal is to navigate through different stages of the dungeon. An Evil Wizard has been growing her army of undead creatures in a nearby castle while practicing forbidden magic. The player's objective is to reach her lair and defeat her once and for all. The game features a tutorial, an intro segment, three stages, and a boss fight. The player uses the WASD or arrow keys to move, the mouse cursor to aim, and the left mouse button (Mouse1) to shoot. The Wizard's minions attack the player with melee attacks, while the Wizard herself uses a powerful ranged attack. The player has a very limited amount of health that is carried over through the stages.
+
+
+
 # Downloaded Assets
 Music: 8-Bit RPG/Adventure Music Pack I By Francesco Fabrizio (Unity Asset Store)
 
