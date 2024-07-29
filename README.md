@@ -10,10 +10,15 @@ https://jezeri.itch.io/wizards-end
 
 # Trailer
 https://youtu.be/ottEMyz4OBc
+
 Song: Ghostrifter Official - Resurgence
+
 License: Creative Commons (CC BY 3.0) https://creativecommons.org/licenses/by/3.0
+
 https://www.youtube.com/channel/UCoRhkLdsX2OKwaEjwdZIQ8Q
+
 Music powered by BreakingCopyright: https://breakingcopyright.com
+
 https://breakingcopyright.com/song/ghostrifter-official-resurgence
 
 # Downloaded Assets
