@@ -8,7 +8,7 @@ Language: C#
 # Playable Web Version
 https://jezeri.itch.io/wizards-end
 
-# Trailer
+# [Trailer](https://youtu.be/ottEMyz4OBc)
 https://youtu.be/ottEMyz4OBc
 
 Song: Ghostrifter Official - Resurgence
