@@ -9,7 +9,7 @@ Language: C#
 https://jezeri.itch.io/wizards-end
 
 # Trailer
-TBA
+https://youtu.be/ottEMyz4OBc
 
 # Downloaded Assets
 Music: 8-Bit RPG/Adventure Music Pack I By Francesco Fabrizio (Unity Asset Store)
